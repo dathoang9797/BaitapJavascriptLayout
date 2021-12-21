@@ -4,9 +4,204 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <form action="" class="needs-validation form-inline calculateSalary">
+            <div class="form-group">
+              <label for="exampleInputEmail1"
+                >Tính tiền lương nhân viên:
+              </label>
+              <input
+                id="employeeSalary"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="Nhập sô ngày làm việc"
+                required
+              />
+            </div>
+            <button class="btn btn-primary mr-2" type="submit">
+              Tính tiền
+            </button>
+            <span id="outputSalary"></span>
+          </form>
+        </div>
+        <div class="col-12 mt-2">
+          <form
+            action=""
+            class="needs-validation form-inline calculateAverageValue"
+          >
+            <label for="exampleInputEmail1"
+              >Tính giá trị trung bình của 5 số thực:
+            </label>
+            <div class="form-group">
+              <input
+                id="float1"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="số thực 1"
+                required
+              />
+              <input
+                id="float2"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="số thực 2"
+                required
+              />
+              <input
+                id="float3"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="số thực 3"
+                required
+              />
+              <input
+                id="float4"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="số thực 4"
+                required
+              />
+              <input
+                id="float5"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="số thực 5"
+                required
+              />
+            </div>
+            <button class="btn btn-primary mt-3 mr-2" type="submit">
+              Tính trung bình
+            </button>
+            <span id="outputAverageValue"></span>
+          </form>
+        </div>
+        <div class="col-12 mt-2">
+          <form action="" class="needs-validation form-inline currencyExchange">
+            <label for="exampleInputEmail1"
+              >Quy đổi USD qua VND:
+            </label>
+            <div class="form-group">
+              <input
+                id="usd"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="USD"
+                required
+              />
+            </div>
+            <button class="btn btn-primary mt-3 mr-2" type="submit">
+              Quy đổi USD qua VND
+            </button>
+            <span id="outputCurrencyExchange"></span>
+          </form>
+        </div>
+        <div class="col-12 mt-2">
+          <form action="" class="needs-validation form-inline acreageRectangle">
+            <label for="exampleInputEmail1"
+              >Tính diện tích hình chữ nhật:
+            </label>
+            <div class="form-group">
+              <input
+                id="widthAcreageRectangle"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="Width"
+                required
+              />
+              <input
+                id="heightAcreageRectangle"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="Height"
+                required
+              />
+            </div>
+            <button class="btn btn-primary mt-3 mr-2" type="submit">
+              Diện tích hình chữ nhật
+            </button>
+            <span id="outputAcreageRectangle"></span>
+          </form>
+          <form
+            action=""
+            class="needs-validation form-inline perimeterRectangle"
+          >
+            <label for="exampleInputEmail1">Tính chu vi hình chữ nhật: </label>
+            <div class="form-group">
+              <input
+                id="widthPerimeterRectangle"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="Width"
+                required
+              />
+              <input
+                id="heightPerimeterRectangle"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="Height"
+                required
+              />
+            </div>
+            <button class="btn btn-primary mt-3 mr-2" type="submit">
+              Chu vi hình chữ nhật
+            </button>
+            <span id="outputPerimeterRectangle"></span>
+          </form>
+        </div>
+        <div class="col-12 mt-2">
+          <form
+            action=""
+            class="needs-validation form-inline calTotalTwoDigitsSign"
+          >
+            <label for="exampleInputEmail1">Tính tổng 2 ký số: </label>
+            <div class="form-group">
+              <input
+                id="digitsSign"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="ký số"
+                required
+              />
+            </div>
+            <button class="btn btn-primary mt-3 mr-2" type="submit">
+              Tính tổng 2 ký số
+            </button>
+            <span id="outputTotalTwoDigitsSign"></span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
   <script src="baitap1.js"></script>
   <script src="baitap2.js"></script>
   <script src="baitap3.js"></script>

@@ -4,8 +4,16 @@
  *  Date created: 14/12/2021
  *  Version:
  **/
-const calculateEmployeeSalary = ((dayWork = 0) => {
+const formSalary = document.querySelector(".calculateSalary");
+const employeeSalary = document.querySelector("#employeeSalary");
+const calculateEmployeeSalary = (dayWork = 0) => {
   const oneDaySalary = 100000;
   return (oneDaySalary * dayWork).toLocaleString();
-})(3);
-console.log({ calculateEmployeeSalary });
+};
+const outPutSalary = document.querySelector("#outputSalary");
+formSalary.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const dayWork = +employeeSalary.value;
+  const result = calculateEmployeeSalary(dayWork);
+  outPutSalary.innerText = `${result}$`;
+});
